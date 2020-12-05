@@ -1,0 +1,64 @@
+<h3 class="display-4 text-center mb-3 text-warning">Modificar libro <small><i class="fas fa-swatchbook"></i></small></h3>
+<form autocomplete="off" (ngSubmit)="modificarlib()" #forma="ngForm">
+
+    <p>
+    <div class="form-group row">
+        <label class="col-3 col-form-label text-center font-weight-bold" for="titulo">Título:</label>
+        <div class="col-9">
+            <input class="form-control" type="text" placeholder="Titulo del Libro" id=" validationServer01"
+                [(ngModel)]="libro.titulo" name="titulo" #nombre="ngModel" required>
+
+            <div class="invalid-feedback">
+
+                El título es necesario.
+
+            </div>
+        </div>
+    </div>
+
+    <p>
+
+    <div class="form-group row">
+        <label class="col-3 col-form-label text-center font-weight-bold" for="autor">Autor:</label>
+        <div class="col-9">
+            <input class="form-control" type="text" placeholder="Autor" id=" validationServer02" name="autor"
+                [(ngModel)]="libro.autor" #password="ngModel" required>
+
+            <div class="invalid-feedback">
+
+                El Autor es necesario.
+
+            </div>
+        </div>
+    </div>
+
+    <p>
+
+    <div class="form-group row">
+        <label class="col-3 col-form-label text-center font-weight-bold" for="editorial">Editorial:</label>
+        <div class="col-9">
+            <input class="form-control" type="text" placeholder="Editorial" id=" validationServer03" name="editorial"
+                [(ngModel)]="libro.editorial" #email="ngModel" required>
+
+            <div class="invalid-feedback">
+
+                La editorial es necesaria.
+
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-3 col-form-label text-center font-weight-bold">Disponible:</label>
+        <div class="col-9 pt-1">
+            <input type="checkbox" placeholder="" id=" validationServer03" name="estatus" [(ngModel)]="libro.disponible"
+                #email="ngModel" required>
+                <label for="estatus" class="pl-2">El libro está disponible</label>
+        </div>
+    </div>
+    <p>
+
+    <p>
+        <button class="btn btn-outline-warning btn-block" type="submit">Actualizar libro <i class="fas fa-sync"></i></button>
+
+</form>
